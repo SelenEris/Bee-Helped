@@ -30,12 +30,13 @@ def connexion_failed():
 def redir_from_connexion():
     mail = request.form['mail']
     password = request.form['password']
+    if password is None or mail == "":
+        return redirect(url_for('connexion_failed'))
     truePassword = func.get_password(studentDict, mail)
     if check_password_hash(truePassword, password):
         return redirect(url_for('index'))
     else:
         return redirect(url_for('connexion_failed'))
-
 
 
 if __name__ == '__main__':
