@@ -1,0 +1,102 @@
+{% extends "layout.html" %} 
+{% block content %}
+  <body>
+	<div>
+    	<form action="/index" method="post">
+
+    		<div class="form-group">
+    		<label for="identifiant">Identifiants :</label>
+    		<br>
+    		<label for="mail">Mail :</label>
+        	<input type="email" class="form-control" id="mail" name="mail">
+        	
+        	<label for="password">Mot de passe  :</label>
+        	<input type="password" class="form-control" id="password" name="password">
+         	<br>
+         	<br>
+        	<label for="identity">Identité  :</label>
+    		<br>
+        	<label for="name">Nom :</label>
+        	<input type="text" class="form-control" id="name" name="name">
+        	<br>
+        	<label for="surname">Prenom :</label>
+        	<input type="text"  class="form-control" id="surname" name="surname">
+        	<br>
+        	<label for="birthDate">Date de naissance (jj/mm/aaaa) :</label>
+        	<input type="text" class="form-control" id="birthDate" name="birthDate">
+        	<br>
+        	<label for="gender">Genre  :</label>
+        	<select name="gender" class="form-control" id="gender">
+      			<option>Homme</option>
+      			<option>Femme</option>
+      			<option>Autre</option>
+    		</select>
+    		<br>
+        	<label for="nationality">Nationalité :</label>
+        	<input type="text" class="form-control" id="nationality" name="nationality">
+        	<br>
+        	<label for="tel">Numéro de telephone :</label>
+        	<input type="text"  class="form-control" id="tel" name="tel">
+        	<br>
+        	<label for="nSecu">Numéro de sécurité social :</label>
+        	<input type="text" class="form-control"  id="nSecu" name="nSecu">
+        	<br>
+        	<br>
+        	
+        	<label for="adress">Adresse :</label>
+        	<br>
+        	<label for="city">Ville :</label>
+        	<input type="text"  class="form-control" id="city" name="city">
+        	<br>
+        	<label for="ZIPcode">Code Postal :</label>
+        	<input type="text"  class="form-control" id="ZIPcode" name="ZIPcode">
+        	<br>
+        	
+        	<label for="streetName">Nom de la rue :</label>
+        	<input type="text"  class="form-control" id="streetName" name="streetName">
+        	<br>
+        	<label for="streetNumber">Numero :</label>
+        	<input type="text" class="form-control" id="streetNumber" name="streetNumber">
+        	<br>
+        	
+        	<label for="complement">Complement d'addresse :</label>
+        	<input type="text"  class="form-control" id="complement" name="complement">
+        	<br>
+        	<br>
+        	<label for="studies">Etudes  :</label>
+    		<br>
+        	<label for="yearStudies">Années d'etudes  :</label>
+        	<input type="text" class="form-control" id="yearStudies" name="yearStudies">
+        	<br>
+        	<label for="typeStudies">types d'etudes  :</label>
+        	<input type="text" class="form-control" id="typeStudies" name="typeStudies">
+        	<br>
+        	<label for="nStudent">Numéros d'etudiant (INE)  :</label>
+        	<input type="text" class="form-control" id="nStudent" name="nStudent">
+        	<br>
+        	<label for="bacMention">Mention au bac :</label>
+        	<select name="bacMention" class="form-control" id="bacMention">
+      			<option>Pas passé</option>
+      			<option>Sans mention</option>
+      			<option>Assez bien</option>
+      			<option>Bien</option>
+      			<option>Très bien</option>
+    		</select>
+    		<br>
+    		<br>
+    		<label for="earning">Finances :</label>
+    		<br>
+			<label for="earnings">Revenus :</label>
+        	<input type="text" class="form-control" id="earnings" name="earnings">
+        	<br>
+        	<label for="parentEarnings">Revenus des parents  :</label>
+        	<input type="text" class="form-control" id="parentEarnings" name="parentEarnings">
+        	 <small id="parentsHelp" class="form-text text-muted">L'addition des salaires mensuels .</small>
+        	<br>
+        	<br>
+        	<button type="submit" class="btn btn-primary">Inscription</button>
+    		</div>
+		</form>
+	</div>
+  </body>
+{% endblock %}
