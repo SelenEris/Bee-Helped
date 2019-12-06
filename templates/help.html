@@ -1,0 +1,18 @@
+{% extends "layout.html" %} 
+{% block content %}
+  <body>
+	<h2 id="name"> les aides auxquelles vous pouvez beneficier </h2>
+    <ul class="list-unstyled">
+    <li id="Bourse "> {{eligibleBourse}} <a title="test bourse" href="https://simulateur.lescrous.fr/">TEST</a></li>
+    <li id="logement "> Ce teste sert pour la bourse mais peut aussi servir pour le logement <a title="eligibilite logement" href="https://trouverunlogement.lescrous.fr/">ici</a></li>
+    <li id="contactBourse ">Vous pouvez prendre contacte avec le Crous  <a title="eligibilite logement" href="https://www.messervices.etudiant.gouv.fr/envole/message/new">ici</a></li>
+    <br>
+
+    <li id="APL "> Si vous etes locataires ou dans une residence etudiante vous pouvez faire le test pour les aides personalisé au logement <a title="test apl" href="https://wwwd.caf.fr/wps/portal/caffr/aidesetservices/lesservicesenligne/estimervosdroits/lelogement">ici</a></li>
+    <li id="info APL "> Pour monter un dossier il vous faudra : une preuve de votre identité (carte d'identité ,passport ou acte de naissance ),un relevé d'identité banquaire ,postale ou epargne et enfin une attestation de loyer signer par le proprietaire.</li>
+    <li id="contact Apl"> Vous pouvez contactez la caf <a title="contac apl" href="https://www.caf.fr/allocataires/caf-de-la-loire/contacter-ma-caf">ici</a></li>
+    <br>
+    <li id="test complet">un test recapitulatif global faisable en 5 min <a title="test entier " href="https://www.aide-sociale.fr/questionnaire-steps/">ici</a></li>
+    </ul>
+  </body>
+{% endblock %}

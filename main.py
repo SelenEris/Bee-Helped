@@ -86,6 +86,19 @@ def redir_from_formulaire():
 	return redirect(url_for('index'))
 
 
+@app.route('/help')
+def aides():
+	mail = request.cookies.get('mail')
+	if 'mail' not in request.cookies:
+		return render_template("index.html")
+	mail = request.cookies.get('mail')
+	values = func.get_data(studentDict, mail)
+	if (values[parentEarnings]*12>80000):
+		eligibleBourse="Peu de chance d'avoir une bourse, essayez quand meme le test "  
+	else:
+		eligibleBourse="Il est possible que vous soyez admissible a la bourse "
+	return render_template("help.html", eligibleBourse="eligibleBourse")
+
 
 if __name__ == '__main__':
     app.run()
