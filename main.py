@@ -15,6 +15,7 @@ studentDict=func.json_to_dictionary(student_file_path)
 def index():
     return render_template("index.html")
 
+
 @app.route('/inscription')
 def inscription():
     return render_template("formulaire.html")
@@ -54,6 +55,7 @@ def redir_from_connexion():
         return res
     else:
         return redirect(url_for('connexion_failed'))
+
 
 @app.route('/redirect_to_index_from_formulaire',methods=['GET','POST'])
 def redir_from_formulaire():
@@ -97,6 +99,8 @@ def aides():
 	mail = request.cookies.get('mail')
 	values = func.get_data(studentDict, mail)
 	return render_template("help.html")
+
+
 
 
 if __name__ == '__main__':
