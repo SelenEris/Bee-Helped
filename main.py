@@ -15,6 +15,10 @@ studentDict=func.json_to_dictionary(student_file_path)
 def index():
     return render_template("index.html")
 
+@app.route('/enDeveloppement')
+def enDeveloppement():
+    return render_template("enDeveloppement.html")    
+
 @app.route('/inscription')
 def inscription():
     return render_template("formulaire.html")
