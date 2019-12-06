@@ -45,7 +45,7 @@ def redir_from_connexion():
         return redirect(url_for('connexion_failed'))
     truePassword = func.get_password(studentDict, mail)
     if check_password_hash(truePassword, password):
-        res = make_response(render_template(url_for('visualisation')))
+        res = make_response(redirect(url_for('visualisation')))
         res.set_cookie('mail', value=mail, max_age=None)
         return res
     else:
