@@ -117,11 +117,7 @@ def aides():
 		return render_template("index.html")
 	mail = request.cookies.get('mail')
 	values = func.get_data(studentDict, mail)
-	if (values[parentEarnings]*12>80000):
-		eligibleBourse="Peu de chance d'avoir une bourse, essayez quand meme le test "  
-	else:
-		eligibleBourse="Il est possible que vous soyez admissible a la bourse "
-	return render_template("help.html", eligibleBourse="eligibleBourse")
+	return render_template("help.html")
 
 
 if __name__ == '__main__':
