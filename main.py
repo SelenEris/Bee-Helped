@@ -15,6 +15,12 @@ studentDict=func.json_to_dictionary(student_file_path)
 def index():
     return render_template("index.html")
 
+@app.route('/visualisation')
+def visualisation():
+    mail = "user@gmail.com"
+    values = func.get_data(studentDict, mail)
+    return render_template("visualisation.html", values = values, mail = mail)
+
 
 @app.route('/connexion')
 def connexion():
