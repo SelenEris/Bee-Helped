@@ -11,6 +11,10 @@ student_file_path = './data/students.json'
 studentDict=func.json_to_dictionary(student_file_path)
 
 
+@app.route('/enDeveloppement')
+def enDeveloppement():
+    return render_template("enDeveloppement.html")
+
 @app.route('/')
 def index():
     return render_template("index.html")
@@ -22,7 +26,6 @@ def inscription():
 
 @app.route('/visualisation')
 def visualisation():
-    mail = request.cookies.get('mail')
     if 'mail' not in request.cookies:
         return render_template("index.html")
     else:
@@ -45,11 +48,13 @@ def connexion_failed():
 def redir_from_connexion():
     mail = request.form['mail']
     password = request.form['password']
-    if password is None or mail == "":
+    if password is None or mail == "" or mail is None or password == "":
         return redirect(url_for('connexion_failed'))
     truePassword = func.get_password(studentDict, mail)
     if check_password_hash(truePassword, password):
         res = make_response(redirect(url_for('visualisation')))
+        if 'mail' in request.cookies:
+          res.set_cookie('mail', '', expires=0)
         res.set_cookie('mail', value=mail, max_age=None)
         return res
     else:
@@ -61,7 +66,7 @@ def redir_from_formulaire():
 	dico={
 	"name": request.form['name'],
 	"surname": request.form['surname'],
-	"password": request.form['password'],
+	"password": generate_password_hash(request.form['password'], "sha256"),
 	"birthDate": request.form['birthDate'],
 	"gender": request.form['gender'],
  	"tel": request.form['tel'],
