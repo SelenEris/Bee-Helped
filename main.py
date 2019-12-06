@@ -18,9 +18,13 @@ def index():
 
 @app.route('/visualisation')
 def visualisation():
-    mail = "user@gmail.com"
-    values = func.get_data(studentDict, mail)
-    return render_template("visualisation.html", values = values, mail = mail)
+    mail = request.cookies.get('mail')
+    if 'mail' not in request.cookies:
+        return render_template("index.html")
+    else:
+       mail = request.cookies.get('mail')
+       values = func.get_data(studentDict, mail)
+       return render_template("visualisation.html", values = values, mail = mail)
 
 
 @app.route('/connexion')
@@ -41,12 +45,12 @@ def redir_from_connexion():
         return redirect(url_for('connexion_failed'))
     truePassword = func.get_password(studentDict, mail)
     if check_password_hash(truePassword, password):
-        res = make_response("auth_cookie")
+        res = make_response(render_template(url_for('visualisation')))
         res.set_cookie('mail', value=mail, max_age=None)
-        return redirect(url_for('index'))
+        return res
     else:
         return redirect(url_for('connexion_failed'))
 
 
 if __name__ == '__main__':
-    app.run("51.83.252.224")
+    app.run()

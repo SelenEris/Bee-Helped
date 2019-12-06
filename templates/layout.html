@@ -19,12 +19,12 @@
      <div>
         
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <a class="navbar-brand" href="index.html">Navbar</a>
+    <!--<a class="navbar-brand" href="{{url_for('index')}}">Home</a>-->
 
     <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="/">Bee Helped </a>
+                <a class="nav-link" href="{{url_for('index')}}">Bee Helped </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/help.html">Trouver une aide</a>
@@ -39,7 +39,10 @@
                 <a class="nav-link" href="/inscription.html">Inscription</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/connexion.html">Connexion</a>
+                <a class="nav-link" href="{{url_for('connexion')}}">Connexion</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{url_for('visualisation')}}">Mon Compte</a>
             </li>
         </ul>
         <form class="form-inline">
