@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 # --- setting constants ---
 student_file_path = './data/students.json'
-studentDict=func.json_to_dictionary(student_file_path)
+studentDict = func.json_to_dictionary(student_file_path)
 
 
 @app.route('/secret')
