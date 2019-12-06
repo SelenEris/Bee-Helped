@@ -10,36 +10,38 @@
 
 <body>
 <header>
-    <div class="container text-center fixed-top page-header">
-        <h1 id="title">Bee Helped</h1>
+    <div class="text-center fixed-top page-header bg-light text-dark">
+        <img class="header-im" src="{{ url_for('static', filename='pictures/logo.png') }}" />
+         <h1 id="title">Bee Helped</h1>
     </div>
     <br/>
     <br/>
     <br/>
+    <br/>
      <div>
-        
+
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <!--<a class="navbar-brand" href="{{url_for('index')}}">Home</a>-->
 
     <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav mr-auto">
-            <!--<li class="nav-item active">
-                <a class="nav-link" href="{{url_for('index')}}">Bee Helped </a>
-            </li>-->
+
             <li class="nav-item active">
-                <a class="nav-link" href="{{url_for('index')}}"><img src="/static/maya.jpg" width="50px" height="=70px"/></a>
+                <a class="nav-link" href="{{url_for('index')}}">
+                    <img src="{{ url_for('static', filename='pictures/logo.png') }}" width="30px" height="30px" />
+                </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/help.html">Trouver une aide</a>
+                <a class="nav-link" href="{{url_for('enDeveloppement')}}">Trouver une aide</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/discussion.html">Discussion</a>
+                <a class="nav-link" href="{{url_for('enDeveloppement')}}">Discussion</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/process.html">Mes démarches</a>
+                <a class="nav-link" href="{{url_for('enDeveloppement')}}">Mes démarches</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/inscription.html">Inscription</a>
+                <a class="nav-link" href="{{url_for('inscription')}}">Inscription</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="{{url_for('connexion')}}">Connexion</a>
@@ -60,11 +62,18 @@
 <div class="container" id="principal-block">
     {% block content %}
     {% endblock %}
+
+    <br/>
+    <br/>
+    <br/>
 </div>
 <footer class="page-footer text-center fixed-bottom">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <br/>
+            <br/>
+            <br/>
+            <div class="col-md-12 bg-light text-dark">
                 <h6> Créé par l'équipe l'Abeille Coule dans le cadre de la Nuit de l'Info.</h6>
                 <h6> ENSISA, France, 2019/2020</h6>
                 <h6>
