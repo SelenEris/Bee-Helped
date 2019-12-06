@@ -20,6 +20,17 @@ def inscription():
     return render_template("formulaire.html")
 
 
+@app.route('/visualisation')
+def visualisation():
+    mail = request.cookies.get('mail')
+    if 'mail' not in request.cookies:
+        return render_template("index.html")
+    else:
+       mail = request.cookies.get('mail')
+       values = func.get_data(studentDict, mail)
+       return render_template("visualisation.html", values = values, mail = mail)
+
+
 @app.route('/connexion')
 def connexion():
     return render_template("connexion.html")
@@ -38,7 +49,9 @@ def redir_from_connexion():
         return redirect(url_for('connexion_failed'))
     truePassword = func.get_password(studentDict, mail)
     if check_password_hash(truePassword, password):
-        return redirect(url_for('index'))
+        res = make_response(redirect(url_for('visualisation')))
+        res.set_cookie('mail', value=mail, max_age=None)
+        return res
     else:
         return redirect(url_for('connexion_failed'))
 

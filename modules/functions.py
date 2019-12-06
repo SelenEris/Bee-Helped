@@ -16,6 +16,11 @@ def dictionary_to_json(path, dictionary):
 
 
 # function getting the hashed password of a person
+def get_data(dictionary, mail):
+    for key, value in dictionary.items():
+        if key == mail:
+            return dict(value)
+
 def get_password(dictionary, mail):
     for key, value in dictionary.items():
         if key == mail:
