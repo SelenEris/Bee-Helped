@@ -85,6 +85,9 @@ def redir_from_formulaire():
 	func.dictionary_to_json(student_file_path, studentDict)
 	return redirect(url_for('index'))
 
+@app.route('/info-ruche')
+def redir_to_ruche():
+    return render_template("info-ruche.html")
 
 
 if __name__ == '__main__':
