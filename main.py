@@ -46,4 +46,4 @@ def redir_from_connexion():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run("51.83.252.224")
