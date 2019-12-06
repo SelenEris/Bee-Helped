@@ -22,10 +22,10 @@
         "earnings": 50,
         "parentEarnings": 2000
     },
-    "jb@gentil.copieur": {
+    "ulysse.coscoy@uha.fr": {
         "name": "",
         "surname": "",
-        "password": "sha256$7rEymZfA$5e8f600363f4b0a0861e99bb1b06d7e402821a9a7746e374aeeac326835322b0",
+        "password": "sha256$y9HfKlc3$3c333da6363cf4b112f45d0c8e6e37a3e2ab2c3aef1c3791eeafc4c5017d098d",
         "birthDate": "",
         "gender": "Homme",
         "tel": "",
@@ -44,5 +44,97 @@
         "typeStudies": "",
         "earnings": "",
         "parentEarnings": ""
+    },
+    "lea.banquart@uha.fr": {
+        "name": "",
+        "surname": "",
+        "password": "sha256$IVoa75cW$8f8deed4a86229dc5b7368a62bbf61377124a5b8cffcaf3523ecde37bdf5ed7d",
+        "birthDate": "",
+        "gender": "Homme",
+        "tel": "",
+        "nationality": "",
+        "address": {
+            "streetNumber": "",
+            "streetName": "",
+            "complement": "",
+            "ZIPCode": "",
+            "city": ""
+        },
+        "nStudent": "",
+        "nSecu": "",
+        "bacMention": "Pas passé",
+        "yearStudies": "",
+        "typeStudies": "",
+        "earnings": "",
+        "parentEarnings": ""
+    },
+    "valentin.lauret@uha.fr": {
+        "name": "",
+        "surname": "",
+        "password": "sha256$LIFcwsTK$f3389f8fc5d1ec8fa428325a391695a46815e20c8d9b50a787b2846031eb3db0",
+        "birthDate": "",
+        "gender": "Homme",
+        "tel": "",
+        "nationality": "",
+        "address": {
+            "streetNumber": "",
+            "streetName": "",
+            "complement": "",
+            "ZIPCode": "",
+            "city": ""
+        },
+        "nStudent": "",
+        "nSecu": "",
+        "bacMention": "Pas passé",
+        "yearStudies": "",
+        "typeStudies": "",
+        "earnings": "",
+        "parentEarnings": ""
+    },
+    "bastien.bodino@uha.fr": {
+        "name": "",
+        "surname": "",
+        "password": "sha256$3PxKqFuk$1675a9a19fed7d64a600c64d030b10bcd9f228203de194c2ae8788eefad03626",
+        "birthDate": "",
+        "gender": "Homme",
+        "tel": "",
+        "nationality": "",
+        "address": {
+            "streetNumber": "",
+            "streetName": "",
+            "complement": "",
+            "ZIPCode": "",
+            "city": ""
+        },
+        "nStudent": "",
+        "nSecu": "",
+        "bacMention": "Pas passé",
+        "yearStudies": "",
+        "typeStudies": "",
+        "earnings": "",
+        "parentEarnings": ""
+    },
+    "maya.labeille@uha.fr": {
+        "name": "Maya",
+        "surname": "",
+        "password": "sha256$VpU59lm3$e8c2d7496619c2211d9521ec37477c6dfc0269e3098e1ff69ee9051a290acf55",
+        "birthDate": "1912",
+        "gender": "Abeille",
+        "tel": "3630",
+        "nationality": "allemande",
+        "address": {
+            "streetNumber": "",
+            "streetName": "Studio 100",
+            "complement": "",
+            "ZIPCode": "",
+            "city": ""
+        },
+        "nStudent": "N/A",
+        "nSecu": "N/A",
+        "bacMention": "N/A",
+        "yearStudies": "plus de 100 ans",
+        "typeStudies": "Célebrité",
+        "earnings": "9999999999",
+        "parentEarnings": "50000"
     }
 }

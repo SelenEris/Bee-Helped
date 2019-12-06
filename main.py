@@ -61,9 +61,9 @@ def connexion_failed():
 @app.route('/redir_from_secret', methods=['GET', 'POST'])
 def redir_from_secret():
     num = request.form['numeroSecret']
-    if num == 0:
+    if num == 3630:
         if 'escape' in request.cookies:
-          return render_template("fincs.html")
+          return render_template("finEscape.html")
         else:
           return render_template("fincs.html")
     else:
