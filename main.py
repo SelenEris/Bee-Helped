@@ -15,6 +15,32 @@ studentDict=func.json_to_dictionary(student_file_path)
 def index():
     return render_template("index.html")
 
+@app.route('/create')
+def create():
+    return render_template("create.html")
+
+@app.route('/escape')
+def escape():
+    res = make_response(redirect(url_for('secret')))
+    res.set_cookie('Escape', value = "true", max_age = 6*10)
+    return res
+
+@app.route('/secret')
+def secret():
+    return render_template("secret.html")
+
+@app.route('/redir_from_secret', methods=['GET','POST'])
+def redir_from_secret():
+    numeroSecret = request.form['numeroSecret']
+    if numeroSecret == '3630':
+        if 'Escape' in request.cookies:
+            return render_template("finEscape.html")
+        else:
+            return render_template("fincs.html")
+    else:
+        return render_template("secretMissed.html")
+
+
 @app.route('/enDeveloppement')
 def enDeveloppement():
     return render_template("enDeveloppement.html")    
@@ -65,7 +91,7 @@ def redir_from_formulaire():
 	dico={
 	"name": request.form['name'],
 	"surname": request.form['surname'],
-	"password": request.form['password'],
+	"password": generate_password_hash(request.form['password'], "sha256"),
 	"birthDate": request.form['birthDate'],
 	"gender": request.form['gender'],
  	"tel": request.form['tel'],
