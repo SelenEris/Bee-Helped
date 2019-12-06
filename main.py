@@ -15,6 +15,7 @@ studentDict=func.json_to_dictionary(student_file_path)
 def index():
     return render_template("index.html")
 
+
 @app.route('/visualisation')
 def visualisation():
     mail = "user@gmail.com"
