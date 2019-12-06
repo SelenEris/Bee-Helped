@@ -1,0 +1,25 @@
+{
+  "user@gmail.com": {
+    "name": "User",
+    "surname": "Doe",
+    "password": "pbkdf2:sha256:150000$ggAMPLdt$6da346554c720641b9f2b8aec7b652217e6927384aa3ca20abf2a488409f7b62",
+    "birthDate": "01/01/2001",
+    "gender": "homme",
+    "tel": "0612345678",
+    "nationality": "Française",
+    "address": {
+      "streetNumber": "01",
+      "streetName": "Rue de la poste",
+      "complement": "Résidence des Bois Vert, bâtiment B",
+      "ZIPCode": "75000",
+      "city": "Paris"
+    },
+    "nStudent": "0000000000A",
+    "nSecu": "101324663463",
+    "bacMention": "bien",
+    "yearStudies": "BAC+2",
+    "typeStudies": "License de Droit",
+    "earnings": 50,
+    "parentEarnings": 2000
+  }
+}

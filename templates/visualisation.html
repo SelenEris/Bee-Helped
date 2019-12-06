@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2 id="name"> {{values['name']}} + {{values['surname']}}</h2>
+<ul class="list-unstyled">
+	<li id="birthDate">Date de naissance : {{values['birthDate']}}</li>
+	<li id="mail">Mail : {{mail}}</li>
+	<li id="tel">Numéro de téléphone : {{values['tel']}}</li>
+	<li id="gender">Genre : {{values['gender']}}</li>
+	<li id="address">Addresse : {{values['address']['streetNumber']}} {{values['address']['streetName']}} {{values['address']['complement']}}, {{values['address']['ZIPCode']}} {{values['address']['city']}}</li>
+	<li id="nationality">Nationalité : {{values['nationality']}}</li>
+	<li id="nSecu">Numéro de sécurité sociale : {{values['nSecu']}}</li>
+	<li id="nStudent">Numéro d'étudiant : {{values['nStudent']}}</li>
+	<li id="typeStudies">Type d'étude : {{values['typeStudies']}}</li>
+	<li id="yearStudies">Années d'études : {{values['yearStudies']}}</li>
+	<li id="bacMention">Mention au BAC : {{values['bacMention']}}</li>
+	<li id="earnings">Revenus : {{values['earnings']}}€/mois</li>
+	<li id="parentEarnings">Revenus des parents : {{values['parentEarnings']}}€/mois</li>
+</ul>
+
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "layout.html" %} <!-- adding the created layout -->
+{% block content %}
+<form action="{{url_for('redir_from_connexion')}}" method="POST" class="text-center"> <!-- creating a listed form with all the names in datasheet -->
+    <div class="form-group text-center">
+        <h2>Connexion</h2>
+        <br/>
+        <label for="exampleInputEmail1" class="text-left">Email address</label>
+        <input name="mail" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <label for="exampleInputPassword1" class="text-left">Password</label>
+        <input name='password' type="password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <div class="text-center">
+        <button type="submit" class="btn btn-success text-center">Connexion</button>
+    </div>
+</form>
+{% endblock %}
