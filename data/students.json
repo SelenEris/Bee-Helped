@@ -22,27 +22,96 @@
         "earnings": 50,
         "parentEarnings": 2000
     },
-    "jb@gentil.copieur": {
-        "name": "",
-        "surname": "",
+    "ulysse.coscoy@uha.fr": {
+        "name": "Coscoy",
+        "surname": "Ulysse",
         "password": "sha256$7rEymZfA$5e8f600363f4b0a0861e99bb1b06d7e402821a9a7746e374aeeac326835322b0",
-        "birthDate": "",
-        "gender": "Homme",
-        "tel": "",
-        "nationality": "",
+        "birthDate": "01/12/2019",
+        "gender": "Abeille",
+        "tel": "0147852369",
+        "nationality": "Incas",
         "address": {
-            "streetNumber": "",
-            "streetName": "",
+            "streetNumber": "17",
+            "streetName": "Rue des Tilleuls",
             "complement": "",
-            "ZIPCode": "",
-            "city": ""
+            "ZIPCode": "68100",
+            "city": "Mulhouse"
         },
-        "nStudent": "",
-        "nSecu": "",
+        "nStudent": "N/A",
+        "nSecu": "N/A",
         "bacMention": "Pas passé",
-        "yearStudies": "",
-        "typeStudies": "",
-        "earnings": "",
-        "parentEarnings": ""
+        "yearStudies": "naissance +5",
+        "typeStudies": "butineur",
+        "earnings": "100",
+        "parentEarnings": "50000"
+    },
+    "lea.banquart@uha.fr": {
+        "name": "Banquart",
+        "surname": "Léa",
+        "password": "sha256$7rEymZfA$5e8f600363f4b0a0861e99bb1b06d7e402821a9a7746e374aeeac326835322b0",
+        "birthDate": "21/02/2014",
+        "gender": "Abeille",
+        "tel": "0147852369",
+        "nationality": "Russe",
+        "address": {
+            "streetNumber": "41",
+            "streetName": "Boulevard des violettes",
+            "complement": "",
+            "ZIPCode": "68100",
+            "city": "Mulhouse"
+        },
+        "nStudent": "N/A",
+        "nSecu": "N/A",
+        "bacMention": "Incroyable",
+        "yearStudies": "entre 0 et 14",
+        "typeStudies": "reine",
+        "earnings": "50000",
+        "parentEarnings": "25000"
+    },
+    "valentin.lauret@uha.fr": {
+        "name": "Lauret",
+        "surname": "Valentin",
+        "password": "sha256$7rEymZfA$5e8f600363f4b0a0861e99bb1b06d7e402821a9a7746e374aeeac326835322b0",
+        "birthDate": "24/11/2019",
+        "gender": "Abeille",
+        "tel": "0147852369",
+        "nationality": "Francais",
+        "address": {
+            "streetNumber": "1",
+            "streetName": "Rue de la rose",
+            "complement": "",
+            "ZIPCode": "68100",
+            "city": "Mulhouse"
+        },
+        "nStudent": "N/A",
+        "nSecu": "N/A",
+        "bacMention": "Bien",
+        "yearStudies": "0",
+        "typeStudies": "nourice",
+        "earnings": "50",
+        "parentEarnings": "50000"
+    },
+    "bastien.bodino@uha.fr": {
+        "name": "Bodino",
+        "surname": "Bastien",
+        "password": "sha256$7rEymZfA$5e8f600363f4b0a0861e99bb1b06d7e402821a9a7746e374aeeac326835322b0",
+        "birthDate": "07/08/2019",
+        "gender": "Abeille",
+        "tel": "0147852369",
+        "nationality": "Canadien",
+        "address": {
+            "streetNumber": "52",
+            "streetName": "Avenue des mimosas",
+            "complement": "",
+            "ZIPCode": "68100",
+            "city": "Mulhouse"
+        },
+        "nStudent": "N/A",
+        "nSecu": "N/A",
+        "bacMention": "N/A",
+        "yearStudies": "surclassé",
+        "typeStudies": "Aide à la reine",
+        "earnings": "500",
+        "parentEarnings": "50000"
     }
 }
