@@ -55,6 +55,38 @@ def redir_from_connexion():
     else:
         return redirect(url_for('connexion_failed'))
 
+@app.route('/redirect_to_index_from_formulaire',methods=['GET','POST'])
+def redir_from_formulaire():
+	mail = request.form['mail']
+	dico={
+	"name": request.form['name'],
+	"surname": request.form['surname'],
+	"password": request.form['password'],
+	"birthDate": request.form['birthDate'],
+	"gender": request.form['gender'],
+ 	"tel": request.form['tel'],
+	"nationality": request.form['nationality'],
+	"address": {
+    	"streetNumber": request.form['streetNumber'],
+    	"streetName": request.form['streetName'],
+    	"complement": request.form['complement'],
+    	"ZIPCode": request.form['ZIPCode'],
+    	"city": request.form['city']
+	},
+	"nStudent": request.form['nStudent'],
+	"nSecu": request.form['nSecu'],
+	"bacMention": request.form['bacMention'],
+	"yearStudies": request.form['yearStudies'],
+	"typeStudies": request.form['typeStudies'],
+	"earnings": request.form['earnings'],
+	"parentEarnings": request.form['parentEarnings']
+	}
+	studentDict[mail]=dico
+	func.dictionary_to_json(student_file_path, studentDict)
+	return redirect(url_for('index'))
+
+
 
 if __name__ == '__main__':
     app.run()
+
