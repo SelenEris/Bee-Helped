@@ -1,0 +1,14 @@
+.header-im {
+    display: inline-block
+    heigh : 7%;
+    width: 7%;
+}
+
+.dev-im {
+     heigh : 50%;
+     width: 50%;
+}
+
+h1 {
+    display: inline-block
+}

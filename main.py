@@ -10,18 +10,6 @@ app = Flask(__name__)
 student_file_path = './data/students.json'
 studentDict=func.json_to_dictionary(student_file_path)
 
-@app.route('/secret')
-def secret():
-    return render_template("secret.html")
-
-@app.route('/escape')
-def escape():
-    res.set_cookie('escape', value=true, max_age=60*20)
-    return render_template("secret.html")
-
-@app.route('/enDeveloppement')
-def enDeveloppement():
-    return render_template("enDeveloppement.html")
 
 @app.route('/')
 def index():
@@ -34,6 +22,7 @@ def inscription():
 
 @app.route('/visualisation')
 def visualisation():
+    mail = request.cookies.get('mail')
     if 'mail' not in request.cookies:
         return render_template("index.html")
     else:
@@ -51,41 +40,28 @@ def connexion():
 def connexion_failed():
     return render_template("connexion_failed.html")
 
-@app.route('/redir_from_secret', methods=['GET', 'POST'])
-def redir_from_secret():
-    num = request.form['numeroSecret']
-    if num == 0:
-        if 'escape' in request.cookies:
-          return render_template("fincs.html")
-        else:
-          return render_template("fincs.html")
-    else:
-        return render_template("secretMissed.html")
-
 
 @app.route('/redirect_to_index_from_connexion', methods=['GET', 'POST'])
 def redir_from_connexion():
     mail = request.form['mail']
     password = request.form['password']
-    if password is None or mail == "" or mail is None or password == "":
+    if password is None or mail == "":
         return redirect(url_for('connexion_failed'))
     truePassword = func.get_password(studentDict, mail)
     if check_password_hash(truePassword, password):
         res = make_response(redirect(url_for('visualisation')))
-        if 'mail' in request.cookies:
-          res.set_cookie('mail', '', expires=0)
         res.set_cookie('mail', value=mail, max_age=None)
         return res
     else:
         return redirect(url_for('connexion_failed'))
 
-@app.route('/redirect_to_index_from_formulaire', methods=['GET','POST'])
+@app.route('/redirect_to_index_from_formulaire',methods=['GET','POST'])
 def redir_from_formulaire():
 	mail = request.form['mail']
 	dico={
 	"name": request.form['name'],
 	"surname": request.form['surname'],
-	"password": generate_password_hash(request.form['password'], "sha256"),
+	"password": request.form['password'],
 	"birthDate": request.form['birthDate'],
 	"gender": request.form['gender'],
  	"tel": request.form['tel'],
@@ -109,6 +85,9 @@ def redir_from_formulaire():
 	func.dictionary_to_json(student_file_path, studentDict)
 	return redirect(url_for('index'))
 
+@app.route('/info-ruche')
+def redir_to_ruche():
+    return render_template("info-ruche.html")
 
 @app.route('/help')
 def aides():
