@@ -2,7 +2,7 @@
 {% block content %}
   <body>
 	<div>
-    	<form action="/index" method="post">
+    	<form action="{{url_for('redir_from_formulaire')}}" method="post">
 
     		<div class="form-group">
     		<label for="identifiant">Identifiants :</label>
@@ -48,8 +48,8 @@
         	<label for="city">Ville :</label>
         	<input type="text"  class="form-control" id="city" name="city">
         	<br>
-        	<label for="ZIPcode">Code Postal :</label>
-        	<input type="text"  class="form-control" id="ZIPcode" name="ZIPcode">
+        	<label for="ZIPCode">Code Postal :</label>
+        	<input type="text"  class="form-control" id="ZIPCode" name="ZIPCode">
         	<br>
         	
         	<label for="streetName">Nom de la rue :</label>
@@ -84,7 +84,7 @@
     		</select>
     		<br>
     		<br>
-    		<label for="earning">Finances :</label>
+    		<label for="Finances">Finances :</label>
     		<br>
 			<label for="earnings">Revenus :</label>
         	<input type="text" class="form-control" id="earnings" name="earnings">
