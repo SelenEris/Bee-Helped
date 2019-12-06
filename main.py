@@ -17,7 +17,9 @@ def index():
 
 @app.route('/visualisation')
 def visualisation():
-    return render_template("visualisation.html")
+    mail = "user@gmail.com"
+    values = func.get_data(studentDict, mail)
+    return render_template("visualisation.html", values = values, mail = mail)
 
 
 @app.route('/connexion')
