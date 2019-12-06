@@ -10,6 +10,14 @@ app = Flask(__name__)
 student_file_path = './data/students.json'
 studentDict=func.json_to_dictionary(student_file_path)
 
+@app.route('/secret')
+def secret():
+    return render_template("secret.html")
+
+@app.route('/escape')
+def escape():
+    res.set_cookie('escape', value=true, max_age=60*20)
+    return render_template("secret.html")
 
 @app.route('/enDeveloppement')
 def enDeveloppement():
@@ -43,6 +51,17 @@ def connexion():
 def connexion_failed():
     return render_template("connexion_failed.html")
 
+@app.route('/redir_from_secret', methods=['GET', 'POST'])
+def redir_from_secret():
+    num = request.form['numeroSecret']
+    if num == 0:
+        if 'escape' in request.cookies:
+          return render_template("fincs.html")
+        else:
+          return render_template("fincs.html")
+    else:
+        return render_template("secretMissed.html")
+
 
 @app.route('/redirect_to_index_from_connexion', methods=['GET', 'POST'])
 def redir_from_connexion():
@@ -60,7 +79,7 @@ def redir_from_connexion():
     else:
         return redirect(url_for('connexion_failed'))
 
-@app.route('/redirect_to_index_from_formulaire',methods=['GET','POST'])
+@app.route('/redirect_to_index_from_formulaire', methods=['GET','POST'])
 def redir_from_formulaire():
 	mail = request.form['mail']
 	dico={
